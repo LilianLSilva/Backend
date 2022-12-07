@@ -24,7 +24,6 @@ class TokenService
         $user= $this->userRepository->getByEmail($request->get('email'));
         if (!empty($user) && password_verify($request->get('password'), $user->password)){
             $token = $this->tokenRestRepository->create();
-            dd($token);
             return $token['access_token'];
         }
         throw new NotFoundException();
