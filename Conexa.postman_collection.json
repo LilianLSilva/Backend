@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "38f5fcaa-2e45-4fb6-9c32-d432aa004f85",
+		"name": "Conexa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10813165"
+	},
+	"item": [
+		{
+			"name": "Planets",
+			"item": [
+				{
+					"name": "GetPlanets",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InV5V2taeGw2M3U2OG1qQnNmWVR2NCJ9.eyJpc3MiOiJodHRwczovL2Rldi03ejhhbzQwMTFicGt3b2g2LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJoV1JscnRtc3AwUER4NXNGYnZxMm4yWEU1M1g3WWh5OEBjbGllbnRzIiwiYXVkIjoiaHR0cHMvL2JhY2tlbmQtYXBpLyIsImlhdCI6MTY3MDI4NjgwNSwiZXhwIjoxNjcwMzczMjA1LCJhenAiOiJoV1JscnRtc3AwUER4NXNGYnZxMm4yWEU1M1g3WWh5OCIsInNjb3BlIjoicmVhZDp2ZWhpY2xlcyByZWFkOnBsYW5ldHMgcmVhZDpwZW9wbGUiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMiLCJwZXJtaXNzaW9ucyI6WyJyZWFkOnZlaGljbGVzIiwicmVhZDpwbGFuZXRzIiwicmVhZDpwZW9wbGUiXX0.uhYGD8rK8_x0I1WtP0auxTyfIc2oqwcE0qnMGXnaCIwK4A1Tx3vh7J_7cjVorFiYvSiqKpduGpBvu18aFfnm9B7n5ioRf6bI6F3hnwFVM3LLlM6_WFPBmS7Gu2SXmFkIxiebWUQLhTBEpLHyfbol1_5--CrgWSG7OyeErKZduXWgQvCI-qBBgG36oytpdK1y0FL6EPKHwxZDQt_KNZObf9MsqRkBVP2RbAhilxYaHWLIgtPjGIloYK38icqFSxuHnwbjJFpu9dVu7WREuNUlNk_zh3DLclQEzehJejyahAHCz4Sve_BeO5rukoqlIRI66rO5W9UFRMFMjPM3TUqNEA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/planets?limit=2&offset=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"planets"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "offset",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPlanet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/planets/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"planets",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "People",
+			"item": [
+				{
+					"name": "GetPeople",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InV5V2taeGw2M3U2OG1qQnNmWVR2NCJ9.eyJpc3MiOiJodHRwczovL2Rldi03ejhhbzQwMTFicGt3b2g2LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJoV1JscnRtc3AwUER4NXNGYnZxMm4yWEU1M1g3WWh5OEBjbGllbnRzIiwiYXVkIjoiaHR0cHMvL2JhY2tlbmQtYXBpLyIsImlhdCI6MTY3MDI4MzIwOSwiZXhwIjoxNjcwMzY5NjA5LCJhenAiOiJoV1JscnRtc3AwUER4NXNGYnZxMm4yWEU1M1g3WWh5OCIsInNjb3BlIjoicmVhZDp2ZWhpY2xlcyByZWFkOnBsYW5ldHMgcmVhZDpwZW9wbGUiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMiLCJwZXJtaXNzaW9ucyI6WyJyZWFkOnZlaGljbGVzIiwicmVhZDpwbGFuZXRzIiwicmVhZDpwZW9wbGUiXX0.jDxX2TpEShYeOsZStmf_HG2MAgwgb3yC-qol-bZoDMt2lZoTk3QvYpcP_CQZjNqXLAM41XoBQEekumM4hJQq3rHzWlGMqnQjZwPJs9qOEehyyoWT7Mtw-_Zcn_UG1KwNjAgEmNSOsm-JLk31sqa8YMIUy3tYwUpoa9Ep19m4ofqY2LAmrzAGbVlDz0EpAmfsW4PsBpxt5ZS4tt-NtoNcCvs2pvgqcbFDxbw_vHVSasyJNPyV3w0_5vn34iVIO59WMEHhXegB3zed8JCSzN8om4RGvL-718C_w3y-SfiB9Q-XdjcbJ5KZ5NSFMUdFqgXMpyikRROmIwAzvjzv7kUPVg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/people?offset=1&limit=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"people"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPerson",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InV5V2taeGw2M3U2OG1qQnNmWVR2NCJ9.eyJpc3MiOiJodHRwczovL2Rldi03ejhhbzQwMTFicGt3b2g2LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJoV1JscnRtc3AwUER4NXNGYnZxMm4yWEU1M1g3WWh5OEBjbGllbnRzIiwiYXVkIjoiaHR0cHMvL2JhY2tlbmQtYXBpLyIsImlhdCI6MTY3MDI4MzIwOSwiZXhwIjoxNjcwMzY5NjA5LCJhenAiOiJoV1JscnRtc3AwUER4NXNGYnZxMm4yWEU1M1g3WWh5OCIsInNjb3BlIjoicmVhZDp2ZWhpY2xlcyByZWFkOnBsYW5ldHMgcmVhZDpwZW9wbGUiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMiLCJwZXJtaXNzaW9ucyI6WyJyZWFkOnZlaGljbGVzIiwicmVhZDpwbGFuZXRzIiwicmVhZDpwZW9wbGUiXX0.jDxX2TpEShYeOsZStmf_HG2MAgwgb3yC-qol-bZoDMt2lZoTk3QvYpcP_CQZjNqXLAM41XoBQEekumM4hJQq3rHzWlGMqnQjZwPJs9qOEehyyoWT7Mtw-_Zcn_UG1KwNjAgEmNSOsm-JLk31sqa8YMIUy3tYwUpoa9Ep19m4ofqY2LAmrzAGbVlDz0EpAmfsW4PsBpxt5ZS4tt-NtoNcCvs2pvgqcbFDxbw_vHVSasyJNPyV3w0_5vn34iVIO59WMEHhXegB3zed8JCSzN8om4RGvL-718C_w3y-SfiB9Q-XdjcbJ5KZ5NSFMUdFqgXMpyikRROmIwAzvjzv7kUPVg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/people/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"people",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicle",
+			"item": [
+				{
+					"name": "GetVehicles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InV5V2taeGw2M3U2OG1qQnNmWVR2NCJ9.eyJpc3MiOiJodHRwczovL2Rldi03ejhhbzQwMTFicGt3b2g2LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJoV1JscnRtc3AwUER4NXNGYnZxMm4yWEU1M1g3WWh5OEBjbGllbnRzIiwiYXVkIjoiaHR0cHMvL2JhY2tlbmQtYXBpLyIsImlhdCI6MTY3MDI4MzIwOSwiZXhwIjoxNjcwMzY5NjA5LCJhenAiOiJoV1JscnRtc3AwUER4NXNGYnZxMm4yWEU1M1g3WWh5OCIsInNjb3BlIjoicmVhZDp2ZWhpY2xlcyByZWFkOnBsYW5ldHMgcmVhZDpwZW9wbGUiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMiLCJwZXJtaXNzaW9ucyI6WyJyZWFkOnZlaGljbGVzIiwicmVhZDpwbGFuZXRzIiwicmVhZDpwZW9wbGUiXX0.jDxX2TpEShYeOsZStmf_HG2MAgwgb3yC-qol-bZoDMt2lZoTk3QvYpcP_CQZjNqXLAM41XoBQEekumM4hJQq3rHzWlGMqnQjZwPJs9qOEehyyoWT7Mtw-_Zcn_UG1KwNjAgEmNSOsm-JLk31sqa8YMIUy3tYwUpoa9Ep19m4ofqY2LAmrzAGbVlDz0EpAmfsW4PsBpxt5ZS4tt-NtoNcCvs2pvgqcbFDxbw_vHVSasyJNPyV3w0_5vn34iVIO59WMEHhXegB3zed8JCSzN8om4RGvL-718C_w3y-SfiB9Q-XdjcbJ5KZ5NSFMUdFqgXMpyikRROmIwAzvjzv7kUPVg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/vehicles?limit=2&offset=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getVehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InV5V2taeGw2M3U2OG1qQnNmWVR2NCJ9.eyJpc3MiOiJodHRwczovL2Rldi03ejhhbzQwMTFicGt3b2g2LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJoV1JscnRtc3AwUER4NXNGYnZxMm4yWEU1M1g3WWh5OEBjbGllbnRzIiwiYXVkIjoiaHR0cHMvL2JhY2tlbmQtYXBpLyIsImlhdCI6MTY3MDI4MzIwOSwiZXhwIjoxNjcwMzY5NjA5LCJhenAiOiJoV1JscnRtc3AwUER4NXNGYnZxMm4yWEU1M1g3WWh5OCIsInNjb3BlIjoicmVhZDp2ZWhpY2xlcyByZWFkOnBsYW5ldHMgcmVhZDpwZW9wbGUiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMiLCJwZXJtaXNzaW9ucyI6WyJyZWFkOnZlaGljbGVzIiwicmVhZDpwbGFuZXRzIiwicmVhZDpwZW9wbGUiXX0.jDxX2TpEShYeOsZStmf_HG2MAgwgb3yC-qol-bZoDMt2lZoTk3QvYpcP_CQZjNqXLAM41XoBQEekumM4hJQq3rHzWlGMqnQjZwPJs9qOEehyyoWT7Mtw-_Zcn_UG1KwNjAgEmNSOsm-JLk31sqa8YMIUy3tYwUpoa9Ep19m4ofqY2LAmrzAGbVlDz0EpAmfsW4PsBpxt5ZS4tt-NtoNcCvs2pvgqcbFDxbw_vHVSasyJNPyV3w0_5vn34iVIO59WMEHhXegB3zed8JCSzN8om4RGvL-718C_w3y-SfiB9Q-XdjcbJ5KZ5NSFMUdFqgXMpyikRROmIwAzvjzv7kUPVg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/vehicles/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"vehicles",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Matias\",\n    \"password\":\"password\",\n    \"email\":\"matias@gmail.com.ar\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "Create token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\":\"password\",\n    \"email\":\"matias@gmail.com.ar\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,134 @@
+
+openapi: 3.0.1
+info:
+  title: Inventario para Vehiculos y naves.
+  description: Haciendo uso de SWAPI, se extiende la funcionalidad agregando los parametros limit y offset
+  version: 1.0.0
+servers:
+- url: http://{BASE_URL}/api
+tags:
+- name: Vehicles
+  description: Se obtiene la informacion de los vehiculos
+- name: People
+  description: Se obtiene la informacion de las personas
+- name: Planets
+  description: Se obtiene la informacion de los planetas
+paths:
+  /vehicles:
+    get:
+      tags:
+      - vehicles
+      description: Obtiene la lista de todos los vehiculos
+      parameters:
+        - in: query
+          name: offset
+          schema:
+            type: integer
+          description: The number of items to skip before starting to collect the result set
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: The numbers of items to return
+      responses:
+        200:
+          description: (OK) La informacion se obtuvo correctamente.
+        422:
+          description: (ERROR) No se pudo obtener la informacion.
+  /vehicles/{id}:
+    get:
+      tags:
+      - vehicles
+      description: Obtiene los atributos de un vehicle a traves de su id
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: id del vehicle
+          schema: 
+            type: number
+            example: 4
+      responses:
+        200:
+          description: (OK) La informacion se obtuvo correctamente.
+        422:
+          description: (ERROR) No se pudo obtener la informacion.
+          
+  /people:
+    get:
+      tags:
+      - people
+      description: Obtiene la lista de todos las personas.
+      parameters:
+        - in: query
+          name: offset
+          schema:
+            type: integer
+          description: The number of items to skip before starting to collect the result set
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: The numbers of items to return
+      responses:
+        200:
+          description: (OK) La informacion se obtuvo correctamente.
+        422:
+          description: (ERROR) No se pudo obtener la informacion.
+  /people/{id}:
+    get:
+      tags:
+      - people
+      description: Obtiene los atributos de una persona a traves de su id
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: id de la persona
+          schema: 
+            type: number
+            example: 2
+      responses:
+        200:
+          description: (OK) La informacion se obtuvo correctamente.
+        422:
+          description: (ERROR) No se pudo obtener la informacion.
+  /planets:
+    get:
+      tags:
+      - planets
+      description: Obtiene la lista de todos los planetas.
+      parameters:
+        - in: query
+          name: offset
+          schema:
+            type: integer
+          description: The number of items to skip before starting to collect the result set
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: The numbers of items to return
+      responses:
+        200:
+          description: (OK) La informacion se obtuvo correctamente.
+        422:
+          description: (ERROR) No se pudo obtener la informacion.
+  /planets/{id}:
+    get:
+      tags:
+      - planets
+      description: Obtiene los atributos de una persona a traves de su id
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: id del planeta
+          schema: 
+            type: number
+            example: 3
+      responses:
+        200:
+          description: (OK) La informacion se obtuvo correctamente.
+        422:
+          description: (ERROR) No se pudo obtener la informacion.
